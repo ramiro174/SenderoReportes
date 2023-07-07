@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/reportesendero', [SenderoController::class, "reporte"]);
+Route::get('/reportesendero/punto', [SenderoController::class, "reportepunto"]);
+Route::get('/reportesendero/usuario', [SenderoController::class, "reporteusuario"]);

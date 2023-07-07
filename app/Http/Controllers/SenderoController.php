@@ -8,7 +8,11 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class SenderoController extends Controller
 {
-    function reporte(Request $request)
+    function reportepunto(Request $request)
+    {
+        return Excel::download(new PuntoExport(), 'Punto.xlsx');
+    }
+    function reporteusuario(Request $request)
     {
         return Excel::download(new PuntoExport(), 'Punto.xlsx');
     }
