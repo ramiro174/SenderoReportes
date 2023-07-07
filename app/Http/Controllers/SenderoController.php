@@ -14,6 +14,6 @@ class SenderoController extends Controller
     }
     function reporteusuario(Request $request)
     {
-        return Excel::download(new PuntoExport(), 'Punto.xlsx');
+        return Excel::download(new PuntoExport(), 'Usuario.xlsx');
     }
 }
