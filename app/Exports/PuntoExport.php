@@ -4,9 +4,9 @@ namespace App\Exports;
 
 use App\Models\Punto;
 use Maatwebsite\Excel\Concerns\FromCollection;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class PuntoExport implements FromCollection,WithHeadingRow
+class PuntoExport implements FromCollection, WithHeadings
 {
     /**
     * @return \Illuminate\Support\Collection

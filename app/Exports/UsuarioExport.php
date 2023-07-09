@@ -3,9 +3,9 @@
 namespace App\Exports;
 use App\Models\Usuario;
 use Maatwebsite\Excel\Concerns\FromCollection;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class UsuarioExport implements FromCollection, WithHeadingRow
+class UsuarioExport implements FromCollection, WithHeadings
 {
     /**
      * @return \Illuminate\Support\Collection
