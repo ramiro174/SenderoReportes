@@ -33,5 +33,9 @@ class PuntoExport implements FromCollection,WithHeadingRow
             "lon",
             "activo"];
     }
+    public function headingRow(): int
+    {
+        return 1;
+    }
 
 }
