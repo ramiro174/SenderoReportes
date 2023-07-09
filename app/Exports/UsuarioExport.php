@@ -16,4 +16,8 @@ class UsuarioExport implements FromCollection,WithHeadingRow
     {
         return Usuario::all();
     }
+    public function headings(): array
+    {
+        return $this->collection()->first()->keys()->toArray();
+    }
 }

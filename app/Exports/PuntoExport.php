@@ -15,4 +15,9 @@ class PuntoExport implements FromCollection,WithHeadingRow
     {
         return Punto::all();
     }
+    public function headings(): array
+    {
+        return $this->collection()->first()->keys()->toArray();
+    }
+
 }
