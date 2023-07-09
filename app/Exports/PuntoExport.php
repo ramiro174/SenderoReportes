@@ -17,7 +17,21 @@ class PuntoExport implements FromCollection,WithHeadingRow
     }
     public function headings(): array
     {
-        return $this->collection()->first()->keys()->toArray();
+        return[
+            "punto_id",
+            "fecha_registro",
+            "tipo_sendero_id",
+            "riesgo_id",
+            "usuario_id",
+            "tipo",
+            "nombre",
+            "region",
+            "estado",
+            "descripcion",
+            "horario",
+            "lat",
+            "lon",
+            "activo"];
     }
 
 }

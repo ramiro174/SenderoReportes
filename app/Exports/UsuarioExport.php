@@ -7,17 +7,36 @@ use App\Models\Usuario;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class UsuarioExport implements FromCollection,WithHeadingRow
+
+class UsuarioExport implements FromCollection, WithHeadingRow
 {
     /**
-    * @return \Illuminate\Support\Collection
-    */
+     * @return \Illuminate\Support\Collection
+     */
     public function collection()
     {
         return Usuario::all();
     }
+
     public function headings(): array
     {
-        return $this->collection()->first()->keys()->toArray();
+        return [
+            "usuario_id",
+            "api_key",
+            "nombre",
+            "genero",
+            "fecha_nacimiento",
+            "estado",
+            "alcaldia",
+            "email",
+            "telefono",
+            "codigo",
+            "contrasena",
+            "autorizado",
+            "activo",
+            "created_at",
+            "updated_at"
+
+        ];
     }
 }
