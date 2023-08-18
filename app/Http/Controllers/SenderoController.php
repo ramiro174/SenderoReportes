@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exports\PuntoExport;
+use App\Exports\UsuarioExport;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -14,6 +15,6 @@ class SenderoController extends Controller
     }
     function reporteusuario(Request $request)
     {
-        return Excel::download(new PuntoExport(), 'Usuario.xlsx');
+        return Excel::download(new UsuarioExport(), 'Usuario.xlsx');
     }
 }
